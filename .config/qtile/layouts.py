@@ -1,12 +1,13 @@
 from libqtile import layout
 from libqtile.config import Match
+from quick_settings import *
 
 layout_theme = {"border_width": 4 ,
-                "margin": 4,
-                "border_focus": "7287fd",
-                "border_normal": "C9CBFF",
+                "margin": 6,
+                "border_focus": color1[1:],
+                "border_normal": color2[1:],
                 "border_on_single": True,
-                "margin_on_single": 4,
+                "margin_on_single": 50,
                 }
 
 layouts = [

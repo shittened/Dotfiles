@@ -15,11 +15,11 @@ def init_widgets_screen2():
 #    return widgets_screen3
 
 def init_screens():
-    return [Screen(top = bar.Bar(widgets = init_widgets_screen1(), size = 25, margin = [0, 0, 4, 0]),
+    return [Screen(top = bar.Bar(widgets = init_widgets_screen1(), size = 28, margin = [0, -20, 6, -20]),
                    bottom = bar.Gap(4),
                    left = bar.Gap(4),
                    right = bar.Gap(4)),
-            Screen(top = bar.Bar(widgets = init_widgets_screen2(), size = 25, margin = [0, 0, 4, 0]),
+            Screen(top = bar.Bar(widgets = init_widgets_screen2(), size = 28, margin = [0, -20, 6, -20]),
                    bottom = bar.Gap(4),
                    left = bar.Gap(4),
                    right = bar.Gap(4))]

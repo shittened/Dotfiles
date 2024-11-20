@@ -11,11 +11,12 @@ starship init fish | source
 #~/Bunnyfetch/bunnyfetch
 #figlet Kiefciman 
 #~/scripts/asciicat.sh
-~/scripts/wow.sh
+#~/scripts/wow.sh
 #colorscript -e 45
 #echo "" && pfetch
 #clear && ~/pokemon-icat/pokemon-icat.sh
 #pokemon-colorscripts -r --no-title
+~/nekofetch/nekofetch.sh --wow
 set fish_cursor_default block
 set fish_cursor_insert block
 
@@ -30,13 +31,14 @@ alias mal='cd ~/AniFetch/ && ./AniFetch.py kiefciman && cd'
 alias funfact='cd ~/fun-fact-cli/ && ./funfacts.sh | cowthink && cd'
 alias copypasta='cd ~/CopypastaBanner && python3 ./banner.py && cd'
 #alias clear='clear && ~/scripts/asciicat.sh'
+alias clear='clear && ~/nekofetch/nekofetch.sh --wow'
 #alias clear='clear && colorscript -e 45'
 #alias clear='clear && ~/pokemon-icat/pokemon-icat.sh'
 #alias clear='clear && pokemon-colorscripts -r --no-title'
 #alias clear='clear && ~/projects/nekofetch/nekofetch.sh'
-alias clear='clear && ~/scripts/wow.sh'
+#alias clear='clear && ~/scripts/wow.sh'
 alias fishrc='nvim ~/.config/fish/config.fish'
-alias qtilerc='nvim ~/.config/qtile/config.py'
+alias qtilerc='nvim ~/.config/qtile'
 alias kittyrc='nvim ~/.config/kitty/kitty.conf'
 alias picomrc='nvim ~/.config/picom/picom.conf'
 alias ewwrc='nvim ~/.config/eww/eww.yuck'

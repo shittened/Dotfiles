@@ -58,7 +58,7 @@ keys = [
     Key([mod, "shift"], "f", lazy.window.toggle_floating(), desc='toggle floating'),
     Key([mod], "w", lazy.spawn("nitrogen"), desc="Change wallpaper"),
     Key([mod], "F11", lazy.window.toggle_fullscreen(), desc='Toggle fullscreen'),
-    Key([mod], "Print", lazy.spawn("fish -c ~/scripts/ss.sh"), desc='Takescreenshot'),
+    Key([mod], "Print", lazy.spawn("flameshot full"), desc='Takescreenshot'),
     # Key([mod], "m", lazy.spawn("kitty -e ranger ~/.config")),
     Key([mod], "n", lazy.spawn("fish -c ~/.config/qtile/control-center.sh"), desc='Notifications'),
     Key([mod, "shift"], "n", lazy.spawn("dunstctl close"), desc='Close notification'),
