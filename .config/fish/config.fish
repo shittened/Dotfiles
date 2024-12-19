@@ -45,13 +45,15 @@ alias ewwrc='nvim ~/.config/eww/eww.yuck'
 alias ewwstyle='nvim ~/.config/eww/eww.scss'
 alias starshiprc='nvim ~/.config/starship.toml'
 alias c='clear'
-alias night='redshift -O 3500'
-alias day='redshift -x'
+#alias night='redshift -O 3500'
+alias night='hyprsunset --temperature 3500 & disown'
+#alias day='redshift -x'
+alias day='killall hyprsunset'
 alias dunstrc='nvim ~/.config/dunst/dunstrc'
 alias vimrc='nvim .config/nvim'
 alias rofirc='nvim .config/rofi/config.rasi'
 alias note='nvim Documents/vimwiki/quicknotes.md'
-alias wiki='nvim Documents/vimwiki/index.md'
+alias wiki='nvim Documents/vimwiki/index.wiki'
 alias help='~/.config/fish/help.sh'
 alias h='help'
 #alias cat='catcat.sh'
@@ -64,6 +66,22 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/Github/Dotfiles/ --work-tree=$HOME'
 #alias animu='cd ~/scripts/animu/; ./animu.sh $1; cd'
 #alias mpv='flatpak run io.mpv.Mpv'
 alias wisdom="python3 ~/wisdom-tree/wisdom_tree/main.py "
+alias lofi='mpv "https://www.youtube.com/watch?v=jfKfPfyJRdk"'
+alias hyprrc="nvim ~/.config/hypr/hyprland.conf"
+alias nb="python3 ~/projects/nekoboard/nekoboard.py"
+
+#############
+# Functions #
+#############
+
+function stuff
+    figlet -f small 'Stuff'
+    echo ' - arttime'
+    echo ' - rain.sh'
+    echo ' - pipes.sh'
+    echo ' - nyancat'
+    echo
+end
 
 ############################
 # Catppuccin color palette #

@@ -1,5 +1,5 @@
 configuration {
-	icon-theme:			 "Papirus Dark";
+	icon-theme:			 "breeze-dark";
 	show-icon:			 true;
 	terminal:			 "kitty";
 	display-format:		 "{icon} {name}";
@@ -44,17 +44,17 @@ configuration {
 }
 window {
     background-color: @blue;
-    border:           3;
-    padding:          5;
+    border:           4;
+    padding:          0;
 	border-color:     @foreground;
 	font:			  "SauceCodePro Nerd Font Bold 12";
-	height:			  500px;
+	height:			  560px;
 	width:			  300px;
 	border-radius:	  20px;
 }
 mainbox {
     border:  0;
-    margin: 10px 10px 10px 10px;
+    margin: 0px 0px 0px 0px;
 }
 message {
     border:       2px 0px 0px ;
@@ -70,21 +70,23 @@ textbox {
 }
 listview {
     fixed-height: 0;
-    border:       2px 0px 0px ;
+    border:       4px 0px 0px ;
     border-color: @blue;
-    spacing:      1px ;
-    scrollbar:    true;
-    padding:      10px 0px 0px ;
+    border-radius:20px;
+    spacing:      10px ;
+    scrollbar:    false;
+    padding:      10px 10px 10px 10px;
 	columns:	  1;
 }
 element {
-    border:		   0;
-    padding:	   2px;
-	border-radius: 0px;
+    border:		   4px;
+    padding:	   5px;
+	border-radius: 15px;
 }
 element-text {
     background-color: inherit;
     text-color:       inherit;
+    padding: 4px 0px 0px 0px;
 }
 element.normal.normal {
     background-color: @normal-background;
@@ -99,11 +101,9 @@ element.normal.active {
     text-color:       @active-foreground;
 }
 element.selected.normal {
-    background-color: @selected-normal-background;
-    text-color:       @selected-normal-foreground;
-	border-color:	  #181825;
-	border:			  0px;
-	border-radius:	  0px;
+    border-color:     @selected-normal-background;
+    text-color:       @selected-normal-background;
+    background-color: @normal-background;
 }
 element.selected.urgent {
     background-color: @selected-urgent-background;
@@ -126,10 +126,8 @@ element.alternate.active {
     text-color:       @alternate-active-foreground;
 }
 scrollbar {
-    width:        2px ;
     border:       0;
-    handle-width: 8px ;
-    padding:      0;
+    handle-width: 4px ;
 }
 mode-switcher {
     border:       2px 0px 0px ;
@@ -142,7 +140,7 @@ button.selected {
 inputbar {
     spacing:    0;
     text-color: @normal-foreground;
-    padding:    1px ;
+    padding:    0px 10px 5px 0px;
 }
 case-indicator {
     spacing:    0;
@@ -169,5 +167,6 @@ textbox-prompt-colon {
 }
 
 element-icon {
-	size:		30px;
+	size:		35px;
+    padding: 0px 0px 0px 5px;
 }

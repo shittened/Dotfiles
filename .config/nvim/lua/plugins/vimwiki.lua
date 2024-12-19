@@ -4,8 +4,10 @@ return {
         vim.g.vimwiki_list = {
             {
                 path = '~/Documents/vimwiki/',
-                syntax = 'markdown',
-                ext = '.md'
+                --syntax = 'markdown',
+                syntax = 'wiki',
+                --ext = '.md'
+                ext = '.wiki'
             }
         }
     end

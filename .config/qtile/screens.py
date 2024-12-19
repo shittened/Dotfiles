@@ -2,7 +2,6 @@ from libqtile import bar, qtile
 from libqtile.config import Screen
 from screen_left import init_widgets_list_left
 from screen_right import init_widgets_list_right
-from screen_single import init_widgets_list_single
 
 def init_widgets_screen1():
     widgets_screen1 = init_widgets_list_left()
@@ -10,9 +9,6 @@ def init_widgets_screen1():
 def init_widgets_screen2():
     widgets_screen2 = init_widgets_list_right()
     return widgets_screen2
-#def init_widgets_screen3():
-#    widgets_screen3 = init_widgets_list_single()
-#    return widgets_screen3
 
 def init_screens():
     return [Screen(top = bar.Bar(widgets = init_widgets_screen1(), size = 28, margin = [0, -20, 6, -20]),

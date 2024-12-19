@@ -1,13 +1,17 @@
 from libqtile import layout
 from libqtile.config import Match
-from quick_settings import *
+from startup import get_colors
+
+color1 = get_colors()[0]
+color2 = get_colors()[1]
+color3 = get_colors()[2]
 
 layout_theme = {"border_width": 4 ,
-                "margin": 6,
+                "margin": 10,
                 "border_focus": color1[1:],
-                "border_normal": color2[1:],
+                "border_normal": color3[1:],
                 "border_on_single": True,
-                "margin_on_single": 50,
+                "margin_on_single": 30,
                 }
 
 layouts = [

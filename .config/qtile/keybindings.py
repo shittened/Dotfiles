@@ -2,8 +2,13 @@ from libqtile.lazy import lazy
 from libqtile.config import Key
 from libqtile.dgroups import simple_key_binder
 from variables import *
+from startup import get_colors
+from colors import colors
 
 dgroups_key_binder = simple_key_binder(mod)
+color1 = get_colors()[0]
+color2 = get_colors()[1]
+color3 = get_colors()[2]
 
 keys = [
     Key([mod], "Left", lazy.layout.left(), desc="Move focus to left"),
@@ -35,7 +40,7 @@ keys = [
     #Key([mod, "shift"], "Return", lazy.layout.toggle_split(), desc="Toggle between split and unsplit sides of stack"),
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
     #Key([mod], "space", lazy.spawn("fish -c ~/scripts/dmenu_drun.sh")),
-    Key([mod], "space", lazy.spawn("rofi -show drun -hover-select -me-select-entry '' -me-accept-entry MousePrimary"), desc="Switch between open apps"),
+    Key([mod], "space", lazy.spawn("rofi -show drun -hover-select -me-select-entry '' -me-accept-entry MousePrimary -show-icons"), desc="Switch between open apps"),
     #Key([mod], "space", lazy.spawn("fish -c '~/scripts/sounds.sh confirm'"), lazy.spawn("fish -c '~/scripts/dmenu_drun.sh; ~/scripts/sounds.sh pokemon'"), desc="dmenu drun"),
     Key([mod], "Tab", lazy.spawn("rofi -show window -hover-select -me-select-entry '' -me-accept-entry MousePrimary"), desc="Switch between open apps"),
 
@@ -46,7 +51,7 @@ keys = [
     Key([mod, "control"], "Delete", lazy.reload_config(), desc="Reload the config"),
     Key([mod, "control"], "End", lazy.shutdown(), desc="Shutdown Qtile"),
     #Key([mod], "r", lazy.spawn("fish -c ~/scripts/dmenu_run.sh")),
-    Key([mod], "r", lazy.spawn("dmenu_run"), desc="Switch between open apps"),
+    Key([mod], "r", lazy.spawn("dmenu_run -nb " + color2 + " -nf " + color3 + " -sf " + color2 + " -sb " + color1 + " -i -l 15 -fn 'Sauce Code Nerd Font Bold 12' -p 'Apps: ' -y 30 -z 600 -bw 4"), desc="Launch apps"),
     #Key([mod], "r", lazy.spawn("fish -c '~/scripts/sounds.sh pause'"), lazy.spawn("fish -c '~/scripts/dmenu_run.sh'")),
     #Key([mod], "r", lazy.spawn("dmenu_run")),
     Key([mod], "f", lazy.spawn(filemanager), desc="Launch file manager"),
@@ -58,7 +63,7 @@ keys = [
     Key([mod, "shift"], "f", lazy.window.toggle_floating(), desc='toggle floating'),
     Key([mod], "w", lazy.spawn("nitrogen"), desc="Change wallpaper"),
     Key([mod], "F11", lazy.window.toggle_fullscreen(), desc='Toggle fullscreen'),
-    Key([mod], "Print", lazy.spawn("flameshot full"), desc='Takescreenshot'),
+    Key([], "Print", lazy.spawn("flameshot full"), desc='Takescreenshot'),
     # Key([mod], "m", lazy.spawn("kitty -e ranger ~/.config")),
     Key([mod], "n", lazy.spawn("fish -c ~/.config/qtile/control-center.sh"), desc='Notifications'),
     Key([mod, "shift"], "n", lazy.spawn("dunstctl close"), desc='Close notification'),
