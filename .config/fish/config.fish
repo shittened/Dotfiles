@@ -16,7 +16,7 @@ starship init fish | source
 #echo "" && pfetch
 #clear && ~/pokemon-icat/pokemon-icat.sh
 #pokemon-colorscripts -r --no-title
-~/nekofetch/nekofetch.sh --wow
+#~/projects/nekofetch/nekofetch.sh --wow
 set fish_cursor_default block
 set fish_cursor_insert block
 
@@ -31,7 +31,7 @@ alias mal='cd ~/AniFetch/ && ./AniFetch.py kiefciman && cd'
 alias funfact='cd ~/fun-fact-cli/ && ./funfacts.sh | cowthink && cd'
 alias copypasta='cd ~/CopypastaBanner && python3 ./banner.py && cd'
 #alias clear='clear && ~/scripts/asciicat.sh'
-alias clear='clear && ~/nekofetch/nekofetch.sh --wow'
+#alias clear='clear && ~/projects/nekofetch/nekofetch.sh --wow'
 #alias clear='clear && colorscript -e 45'
 #alias clear='clear && ~/pokemon-icat/pokemon-icat.sh'
 #alias clear='clear && pokemon-colorscripts -r --no-title'
@@ -45,10 +45,10 @@ alias ewwrc='nvim ~/.config/eww/eww.yuck'
 alias ewwstyle='nvim ~/.config/eww/eww.scss'
 alias starshiprc='nvim ~/.config/starship.toml'
 alias c='clear'
-#alias night='redshift -O 3500'
-alias night='hyprsunset --temperature 3500 & disown'
-#alias day='redshift -x'
-alias day='killall hyprsunset'
+alias night='redshift -O 3500'
+#alias night='hyprsunset --temperature 3500 & disown'
+alias day='redshift -x'
+#alias day='killall hyprsunset'
 alias dunstrc='nvim ~/.config/dunst/dunstrc'
 alias vimrc='nvim .config/nvim'
 alias rofirc='nvim .config/rofi/config.rasi'

@@ -4,7 +4,11 @@ return {
   config = function()
     require('dashboard').setup {
         theme = 'doom',
-        hide = {},
+        hide = {
+            statusline,
+            tabline,
+            winbar
+        },
         config = {
             header = {
                 '',

@@ -11,7 +11,7 @@ layout_theme = {"border_width": 4 ,
                 "border_focus": color1[1:],
                 "border_normal": color3[1:],
                 "border_on_single": True,
-                "margin_on_single": 30,
+                "margin_on_single": 10,
                 }
 
 layouts = [
