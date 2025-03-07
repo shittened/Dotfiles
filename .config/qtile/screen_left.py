@@ -1,5 +1,5 @@
 from libqtile import widget
-from startup import get_colors
+from settings import get_colors
 
 def init_widgets_list_left():
     color1 = get_colors()[0]
@@ -7,11 +7,6 @@ def init_widgets_list_left():
     color3 = get_colors()[2]
 
     widgets_list = [
-        widget.Clock(
-            format = ' %H:%M ',
-            background = color2,
-            foreground = color1,
-        ),
         widget.GroupBox(
             background = color2,
             active = color1,
@@ -19,13 +14,10 @@ def init_widgets_list_left():
             disable_drag = True,
             highlight_method = 'line',
             this_current_screen_border = color1,
-            padding_x = 5,
             highlight_color = color1,
             block_highlight_text_color = color2,
-        ),
-        widget.TextBox(
-            background = color2,
-            text = ' ',
+            padding_x = 6,
+            spacing = 0,
         ),
         widget.WindowName(
             background = color1,
@@ -47,7 +39,7 @@ def init_widgets_list_left():
             foreground = color1,
             fmt = ' 󰕾 {} ',
             update_interval = 0.1,
-            get_volume_command = 'amixer -D pulse',
+            #get_volume_command = 'amixer -D pulse',
             step = 5,
         ),
         widget.Battery(
@@ -57,9 +49,14 @@ def init_widgets_list_left():
             format = '   {percent:2.0%} ',
         ),
         widget.Clock(
-            format=' %d.%m %a ',
+            format=' %H:%M %d.%m %a ',
             background = color2,
             foreground = color1,
+        ),
+        widget.Systray(
+            background = color2,
+            icon_size = 20,
+            padding = 1,
         ),
     ]
 

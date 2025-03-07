@@ -7,6 +7,9 @@ end
 ###########
 set fish_greeting
 starship init fish | source
+#export PF_INFO="ascii title os host kernel uptime pkgs wm" && pfetch
+#uwufetch
+#~/projects/nekostart/nekostart.sh
 #~/projects/nekofetch/nekofetch.sh
 #~/Bunnyfetch/bunnyfetch
 #figlet Kiefciman 
@@ -21,7 +24,6 @@ set fish_cursor_default block
 set fish_cursor_insert block
 
 export PATH="$PATH:/home/kiefciman/.dotnet/tools"
-export YTUI_MUSIC_DIR=/home/kiefciman/Music/
 
 ###########
 # Aliases #
@@ -37,6 +39,9 @@ alias copypasta='cd ~/CopypastaBanner && python3 ./banner.py && cd'
 #alias clear='clear && pokemon-colorscripts -r --no-title'
 #alias clear='clear && ~/projects/nekofetch/nekofetch.sh'
 #alias clear='clear && ~/scripts/wow.sh'
+#alias clear='clear && uwufetch'
+#alias clear='clear && ~/projects/nekostart/nekostart.sh'
+#alias clear='clear && export PF_INFO="ascii title os host kernel uptime pkgs wm" && pfetch'
 alias fishrc='nvim ~/.config/fish/config.fish'
 alias qtilerc='nvim ~/.config/qtile'
 alias kittyrc='nvim ~/.config/kitty/kitty.conf'
@@ -50,10 +55,9 @@ alias night='redshift -O 3500'
 alias day='redshift -x'
 #alias day='killall hyprsunset'
 alias dunstrc='nvim ~/.config/dunst/dunstrc'
-alias vimrc='nvim .config/nvim'
+alias vimrc='nvim ~/.config/nvim'
 alias rofirc='nvim .config/rofi/config.rasi'
-alias note='nvim Documents/vimwiki/quicknotes.md'
-alias wiki='nvim Documents/vimwiki/index.wiki'
+alias wiki='nvim ~/Documents/wiki'
 alias help='~/.config/fish/help.sh'
 alias h='help'
 #alias cat='catcat.sh'
@@ -133,3 +137,8 @@ set -g fish_pager_color_description $gray
 fish_add_path /home/kiefciman/.spicetify
 
 #eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+set -x LD_LIBRARY_PATH /home/shitten/.local/lib/arch-mojo $LD_LIBRARY_PATH
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH

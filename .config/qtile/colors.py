@@ -1,15 +1,14 @@
-colors = [
-    "#F28FAD", #red
-    "#F8BD96", #orange
-    "#FAE3B0", #yellow
-    "#ABE9B3", #green
-    "#89DCEB", #cian
-    "#7aa2f7", #blue
-    "#bb9af7", #indigo
-    "#D9E0EE", #white
-    "#C3BAC6", #cream
-    "#575268", #dark indigo
-    "#302D41", #dark
-    "#1A1823", #black
-    "#f5bde6", #pink
-]
+red = "#F28FAD"
+orange = "#F8BD96"
+yellow = "#FAE3B0"
+green = "#ABE9B3"
+cian = "#89DCEB"
+blue = "#7aa2f7"
+indigo = "#bb9af7"
+white = "#D9E0EE"
+cream = "#C3BAC6"
+dark_indigo = "#575268"
+dark = "#302D41"
+black = "#1A1823"
+pink = "#f5bde6"
+fullblack = "#000000"

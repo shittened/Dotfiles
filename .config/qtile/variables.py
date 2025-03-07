@@ -1,5 +1,0 @@
-mod = 'mod4'
-terminal = 'kitty'
-filemanager = 'pcmanfm'
-termfilemanager = 'ranger'
-browser = 'flatpak run io.github.zen_browser.zen'

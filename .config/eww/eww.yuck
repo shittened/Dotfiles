@@ -13,6 +13,7 @@
 (defpoll second :interval "1s" `date +%S`)
 
 (deflisten stats "bash ~/.config/eww/stats.sh")
+(deflisten stats_vert "bash ~/.config/eww/stats-vert.sh")
 (defpoll active_window :interval "0.1s" "bash ~/.config/eww/get-active-window")
 
 (defwidget bar []
@@ -40,7 +41,7 @@
               :class "workspace-entry ${workspace.windows > 0 ? "occupied" : "empty"}"
               (label 
                 :show-truncated false
-                :text "${workspace.id}" 
+                :text "  " 
                 :class "workspace-entry ${workspace.id == current_workspace ? "current" : ""}" 
               )
             )
@@ -50,12 +51,12 @@
     )
     (box
       :class "window"
-      :width 1100
+      :width 1070
       :hexpand false
       (label 
         :xalign 0
         :hexpand false
-        :show-truncated false
+        :show-truncated true
         :text "${window}"
       )
     )
@@ -90,6 +91,67 @@
         :x "20px"
         :y "10px")
 (bar))
+
+(defwidget vertbar []
+    (box
+        :class "bar"
+        :space-evenly false
+        :hexpand false
+        :orientation 'v'
+        (box 
+            :class 'workspaces'
+            :space-evenly true
+            :orientation 'v'
+            (label 
+                :text "${workspaces}${current_workspace}" 
+                :show-truncated false
+                :visible false
+            )
+            (for workspace in workspaces
+                (eventbox 
+                    :onclick "hyprctl dispatch workspace ${workspace.id}"
+                    (box 
+                        :class "workspace-entry-vert ${workspace.windows > 0 ? "occupied" : "empty"}"
+                        (label 
+                        :show-truncated false
+                        :text "" 
+                        :class "workspace-entry-vert ${workspace.id == current_workspace ? "current" : ""}" 
+                        )
+                    )
+                )
+            )
+        )
+        (label
+            :class 'cpu'
+            :text ''
+            :show-truncated false
+        )
+        (label
+            :class 'ram'
+            :text "${round(EWW_RAM['available_mem'] / 1024 / 1024 / 1024, 1)}G"
+            :show-truncated false
+        )
+    )
+)
+
+(defwindow bar
+    :monitor 0
+    :windowtype "dock"
+    :exclusive true
+    :reserve 
+      (struts
+        :side "left"
+        :distance "30px"
+      )
+    :geometry
+      (geometry
+        :anchor "center left"
+        :width "40px"
+        :height "1040px"
+        :x "10px"
+        :y "20px")
+(vertbar))
+
 
 (defwidget dockwidget []
     (box

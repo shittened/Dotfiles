@@ -2,7 +2,7 @@ from libqtile import bar, qtile
 from libqtile.config import Screen
 from screen_left import init_widgets_list_left
 from screen_right import init_widgets_list_right
-from startup import get_colors
+from settings import get_colors
 
 color1 = get_colors()[0]
 
@@ -19,9 +19,9 @@ def init_screens():
             top = bar.Bar(
                 widgets = init_widgets_screen1(),
                 size = 28,
-                margin = [10, 20, 10, 20], #NESW
+                margin = [10, 15, 10, 15], #NESW
                 border_color = color1,
-                border_width = 4,
+                border_width = 0,
             ),
             bottom = bar.Gap(10),
             left = bar.Gap(10),
@@ -33,7 +33,7 @@ def init_screens():
                 size = 28,
                 margin = [10, 20, 10, 20], #NESW
                 border_color = color1,
-                border_width = 4,
+                border_width = 0,
             ),
             bottom = bar.Gap(10),
             left = bar.Gap(10),

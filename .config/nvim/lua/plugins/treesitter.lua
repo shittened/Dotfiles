@@ -7,10 +7,9 @@ return {
             ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "python" },
             sync_install = false,
             auto_install = true,
-            ignore_install = {},
+            ignore_install = { "html" },
             highlight = {
                 enable = true,
-                disable = {},
                 disable = function(lang, buf)
                 local max_filesize = 10000 * 1024
                 local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
