@@ -1,0 +1,64 @@
+Chainsaw Man|h|1|1|12|12|10
+Jojo|w|5|3|24|3|8
+Made in abyss|w|1|1|13|10|10
+One Punch Man|w|3|2|12|1|10
+Attack on Titan|h|4-3|4-3|2|1|10
+86|c|2|2|12|12|10
+Bakugan|c|4|4|52|52|10
+Doubutsu no Mori|c|1|1|1|1|10
+Inazuma Eleven|c|1|1|127|127|8
+Beyblade|c|3|3|51|51|10
+Naruto|c|1|1|220|220|10
+Tokyo Ghoul|c|5|5|12|12|10
+Totoro|c|1|1|1|1|10
+Promised Neverland|c|2|2|11|11|10
+Accel World|h|1|1|24|7|9
+Death Note|h|1|1|37|2|8
+Goblin Slayer|h|1|1|12|2|7
+Kuma Kuma Kuma Bear|w|2|1|12|4|10
+Naruto SD Rock lee|h|1|1|51|2|10
+That Time I Got Reincarnated as a Slime|h|3|1|24|8|9
+Kakegurui|d|1|1|12|1|4
+One Piece|d|1|1|??|50|9
+The Pet Girl of Sakurasou|d|1|1|24|2|5
+RWBY Hyousetsu Teikoku|p|1|0|0|0|0
+Cyberpunk Edgerunners|p|1|0|0|0|0
+Lycoris Recoil|p|1|0|0|0|0
+Wonder Egg Priority|p|1|0|0|0|0
+Detective Conan|p|1|0|0|0|0
+Crayon Shin-chan|p|1|0|0|0|0
+Summertime Render|p|1|0|0|0|0
+Gokushufudou|p|2|0|0|0|0
+Tenki no Ko|p|1|0|0|0|0
+Magi Sinbad no Bouken|p|1|0|0|0|0
+Suzume no Tojimari|p|1|0|0|0|0
+Vivy Flourite Eye's song|p|2|0|0|0|0
+Angel Beats|p|1|0|0|0|0
+009 Re Cyborg|p|1|0|0|0|0
+Xian Wang de Richang Shenghuo|p|1|0|0|0|0
+Musaigenno Phantom World|p|1|0|0|0|0
+Rokka no Yuusha|p|1|0|0|0|0
+Uma Musume|p|1|0|0|0|0
+Kaijuu no Komodo|p|1|0|0|0|0
+Takt Op Destiny|p|1|0|0|0|0
+Mushoku Tensei|p|2|0|0|0|0
+Date a Live|p|4|0|0|0|0
+Star Wars Vision|p|1|0|0|0|0
+My Senpai is Annoying|p|1|0|0|0|0
+Wich Craft Works|p|1|0|0|0|0
+UQ Holder|p|2|0|0|0|0
+Kuroshitsuji|p|4|0|0|0|0
+Yi Ren Zhi Xia|p|5|0|0|0|0
+Fate|p|6|0|0|0|0
+Miira no Kaikata|p|1|0|0|0|0
+Dr Stone|p|2|0|0|0|0
+Tantei wa Mou Shindeiru|p|1|0|0|0|0
+Shadow House|p|1|0|0|0|0
+Konosuba|c|2|1|7|7|10
+Naruto Shippuuden|w|1|1|500|190|10
+Seraph of the end|c|2|1|24|2|10
+Konosuba: an explosion on this wonderful world|c|1|1|12|1|10
+Bocchi the Rock|w|1|1|12|5|10
+16bit Sensation: Another Layer|c|1|1|13|10|10
+Frieren|w|1|1|20|4|10
+Girl's last tour|w|1|1|12|1|10
