@@ -7,7 +7,7 @@ end
 ###########
 set fish_greeting
 starship init fish | source
-#export PF_INFO="ascii title os host kernel uptime pkgs wm" && pfetch
+export PF_INFO="ascii title os host kernel uptime pkgs wm" && pfetch
 #uwufetch
 #~/projects/nekostart/nekostart.sh
 #~/projects/nekofetch/nekofetch.sh
@@ -41,7 +41,7 @@ alias copypasta='cd ~/CopypastaBanner && python3 ./banner.py && cd'
 #alias clear='clear && ~/scripts/wow.sh'
 #alias clear='clear && uwufetch'
 #alias clear='clear && ~/projects/nekostart/nekostart.sh'
-#alias clear='clear && export PF_INFO="ascii title os host kernel uptime pkgs wm" && pfetch'
+alias clear='clear && export PF_INFO="ascii title os host kernel uptime pkgs wm" && pfetch'
 alias fishrc='nvim ~/.config/fish/config.fish'
 alias qtilerc='nvim ~/.config/qtile'
 alias kittyrc='nvim ~/.config/kitty/kitty.conf'
@@ -57,22 +57,20 @@ alias day='redshift -x'
 alias dunstrc='nvim ~/.config/dunst/dunstrc'
 alias vimrc='nvim ~/.config/nvim'
 alias rofirc='nvim .config/rofi/config.rasi'
-alias wiki='nvim ~/Documents/wiki'
-alias help='~/.config/fish/help.sh'
-alias h='help'
 #alias cat='catcat.sh'
 alias myanimestats='~/scripts/myanimestats/./myanimestats.sh'
 alias lavat='lavat -c blue -R 1 -k red'
 alias ls='ptls -a'
 alias la='ptls -la'
 alias pwd='ptpwd'
-alias dotfiles='/usr/bin/git --git-dir=$HOME/Github/Dotfiles/ --work-tree=$HOME'
 #alias animu='cd ~/scripts/animu/; ./animu.sh $1; cd'
 #alias mpv='flatpak run io.mpv.Mpv'
 alias wisdom="python3 ~/wisdom-tree/wisdom_tree/main.py "
 alias lofi='mpv "https://www.youtube.com/watch?v=jfKfPfyJRdk"'
 alias hyprrc="nvim ~/.config/hypr/hyprland.conf"
 alias nb="python3 ~/projects/nekoboard/nekoboard.py"
+alias org="nvim ~/Documents/org"
+alias awesomerc='nvim ~/.config/awesome'
 
 #############
 # Functions #

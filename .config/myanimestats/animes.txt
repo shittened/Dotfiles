@@ -2,7 +2,7 @@ Chainsaw Man|h|1|1|12|12|10
 Jojo|w|5|3|24|3|8
 Made in abyss|w|1|1|13|10|10
 One Punch Man|w|3|2|12|1|10
-Attack on Titan|h|4-3|4-3|2|1|10
+Attack on Titan|c|4|4-3|2|1|10
 86|c|2|2|12|12|10
 Bakugan|c|4|4|52|52|10
 Doubutsu no Mori|c|1|1|1|1|10
@@ -13,19 +13,15 @@ Tokyo Ghoul|c|5|5|12|12|10
 Totoro|c|1|1|1|1|10
 Promised Neverland|c|2|2|11|11|10
 Accel World|h|1|1|24|7|9
-Death Note|h|1|1|37|2|8
-Goblin Slayer|h|1|1|12|2|7
+Death Note|d|1|1|37|2|6Goblin Slayer|h|1|1|12|2|7
 Kuma Kuma Kuma Bear|w|2|1|12|4|10
-Naruto SD Rock lee|h|1|1|51|2|10
-That Time I Got Reincarnated as a Slime|h|3|1|24|8|9
+Naruto SD Rock lee|d|1|1|51|2|88That Time I Got Reincarnated as a Slime|h|3|1|24|8|9
 Kakegurui|d|1|1|12|1|4
 One Piece|d|1|1|??|50|9
 The Pet Girl of Sakurasou|d|1|1|24|2|5
 RWBY Hyousetsu Teikoku|p|1|0|0|0|0
 Cyberpunk Edgerunners|p|1|0|0|0|0
-Lycoris Recoil|p|1|0|0|0|0
-Wonder Egg Priority|p|1|0|0|0|0
-Detective Conan|p|1|0|0|0|0
+Lycoris Recoil|w|1|1|13|1|8Detective Conan|p|1|0|0|0|0
 Crayon Shin-chan|p|1|0|0|0|0
 Summertime Render|p|1|0|0|0|0
 Gokushufudou|p|2|0|0|0|0
@@ -61,4 +57,4 @@ Konosuba: an explosion on this wonderful world|c|1|1|12|1|10
 Bocchi the Rock|w|1|1|12|5|10
 16bit Sensation: Another Layer|c|1|1|13|10|10
 Frieren|w|1|1|20|4|10
-Girl's last tour|w|1|1|12|1|10
+Girl's last tour|w|1|1|12|10|10

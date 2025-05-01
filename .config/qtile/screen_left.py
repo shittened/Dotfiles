@@ -7,6 +7,10 @@ def init_widgets_list_left():
     color3 = get_colors()[2]
 
     widgets_list = [
+        widget.Spacer(
+            length = 5,
+            background = color2
+        ),
         widget.GroupBox(
             background = color2,
             active = color1,
@@ -16,7 +20,7 @@ def init_widgets_list_left():
             this_current_screen_border = color1,
             highlight_color = color1,
             block_highlight_text_color = color2,
-            padding_x = 6,
+            padding_x = 4,
             spacing = 0,
         ),
         widget.WindowName(
@@ -57,6 +61,10 @@ def init_widgets_list_left():
             background = color2,
             icon_size = 20,
             padding = 1,
+        ),
+        widget.Spacer(
+            length = 10,
+            background = color2
         ),
     ]
 

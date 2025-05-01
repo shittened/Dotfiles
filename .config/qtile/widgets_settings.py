@@ -1,6 +1,6 @@
 widget_defaults = dict(
     font='SauceCodePro Nerd Font Bold',
-    fontsize=17,
+    fontsize=15,
     padding=1,
 )
 
