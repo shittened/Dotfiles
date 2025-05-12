@@ -2,11 +2,9 @@ local awful = require('awful')
 local gears = require('gears')
 local wibox = require('wibox')
 local beautiful = require('beautiful')
+require('settings')
 
-local space = wibox.widget{
-    text = '   ',
-    widget = wibox.widget.textbox
-}
+
 
 -- Create a wibox for each screen and add it
 local taglist_buttons = gears.table.join(
@@ -49,6 +47,14 @@ local tasklist_buttons = gears.table.join(
                                           end))
 
 awful.screen.connect_for_each_screen(function(s)
+
+    s.padding = {
+        left = screen_padding,
+        right = screen_padding,
+        top = screen_padding,
+        bottom = screen_padding
+    }
+
     -- Each screen has its own tag table.
     awful.tag({ " x ", " x ", " x ", " x ", " x ", " x ", " x ", " x ", " x " }, s, awful.layout.layouts[1])
 
@@ -76,25 +82,411 @@ awful.screen.connect_for_each_screen(function(s)
 
     -- Create the wibox
     s.mywibox = awful.wibar({ 
-        position = "bottom",
+        position = 'bottom',
         screen = s,
         height = 28,
     })
+
+    separator = wibox.widget {
+        text = ' ',
+        widget = wibox.widget.textbox
+    }
+
+    space = wibox.widget {
+        text = '   ',
+        widget = wibox.widget.textbox
+    }
+
+    nightlight_button = wibox.widget {
+        text = '󰽥',
+        font = 'SauceCodePro Nerd Font 20',
+        align = 'center',
+        valign = 'center',
+        forced_width = 50,
+        forced_height = 50,
+        widget = wibox.widget.textbox
+    }
+
+    nightlight_button:buttons(gears.table.join(
+        nightlight_button:buttons(),
+        awful.button({}, 1, nil, function()
+
+        end)
+    ))
+
+    nightlight_button_container = wibox.widget {
+        nightlight_button,
+        shape = gears.shape.rounded_rect,
+        widget = wibox.container.background
+    }
+
+    nightlight_button_container:connect_signal('mouse::enter', function(self)
+        self.bg = beautiful.bg_normal
+        self.fg = beautiful.fg_normal
+        self:emit_signal('widget::updated')
+    end)
+
+    nightlight_button_container:connect_signal('mouse::leave', function(self)
+        self.bg = beautiful.bg_focus
+        self.fg = beautiful.fg_focus
+        self:emit_signal('widget::updated')
+    end)
+
+    refresh_button = wibox.widget {
+        text = '',
+        font = 'SauceCodePro Nerd Font 20',
+        align = 'center',
+        valign = 'center',
+        forced_width = 50,
+        forced_height = 50,
+        widget = wibox.widget.textbox
+    }
+
+    refresh_button:buttons(gears.table.join(
+        refresh_button:buttons(),
+        awful.button({}, 1, nil, awesome.restart)
+    ))
+
+    refresh_button_container = wibox.widget {
+        refresh_button,
+        shape = gears.shape.rounded_rect,
+        widget = wibox.container.background
+    }
+
+    refresh_button_container:connect_signal('mouse::enter', function(self)
+        self.bg = beautiful.bg_normal
+        self.fg = beautiful.fg_normal
+        self:emit_signal('widget::updated')
+    end)
+
+    refresh_button_container:connect_signal('mouse::leave', function(self)
+        self.bg = beautiful.bg_focus
+        self.fg = beautiful.fg_focus
+        self:emit_signal('widget::updated')
+    end)
+
+    lockscreen_button = wibox.widget {
+        text = '󰌾',
+        font = 'SauceCodePro Nerd Font 20',
+        align = 'center',
+        valign = 'center',
+        forced_width = 50,
+        forced_height = 50,
+        widget = wibox.widget.textbox
+    }
+
+    lockscreen_button:buttons(gears.table.join(
+        lockscreen_button:buttons(),
+        awful.button({}, 1, nil, function()
+
+        end)
+    ))
+
+    lockscreen_button_container = wibox.widget {
+        lockscreen_button,
+        shape = gears.shape.rounded_rect,
+        widget = wibox.container.background
+    }
+
+    lockscreen_button_container:connect_signal('mouse::enter', function(self)
+        self.bg = beautiful.bg_normal
+        self.fg = beautiful.fg_normal
+        self:emit_signal('widget::updated')
+    end)
+
+    lockscreen_button_container:connect_signal('mouse::leave', function(self)
+        self.bg = beautiful.bg_focus
+        self.fg = beautiful.fg_focus
+        self:emit_signal('widget::updated')
+    end)
+
+    logout_button = wibox.widget {
+        text = '󰍃',
+        font = 'SauceCodePro Nerd Font 20',
+        align = 'center',
+        valign = 'center',
+        forced_width = 50,
+        forced_height = 50,
+        widget = wibox.widget.textbox
+    }
+
+    logout_button:buttons(gears.table.join(
+        logout_button:buttons(),
+        awful.button({}, 1, nil, function()
+
+        end)
+    ))
+
+    logout_button_container = wibox.widget {
+        logout_button,
+        shape = gears.shape.rounded_rect,
+        widget = wibox.container.background
+    }
+
+    logout_button_container:connect_signal('mouse::enter', function(self)
+        self.bg = beautiful.bg_normal
+        self.fg = beautiful.fg_normal
+        self:emit_signal('widget::updated')
+    end)
+
+    logout_button_container:connect_signal('mouse::leave', function(self)
+        self.bg = beautiful.bg_focus
+        self.fg = beautiful.fg_focus
+        self:emit_signal('widget::updated')
+    end)
+
+    reboot_button = wibox.widget {
+        text = '',
+        font = 'SauceCodePro Nerd Font 20',
+        align = 'center',
+        valign = 'center',
+        forced_width = 50,
+        forced_height = 50,
+        widget = wibox.widget.textbox
+    }
+
+    reboot_button:buttons(gears.table.join(
+        reboot_button:buttons(),
+        awful.button({}, 1, nil, function()
+
+        end)
+    ))
+
+    reboot_button_container = wibox.widget {
+        reboot_button,
+        shape = gears.shape.rounded_rect,
+        widget = wibox.container.background
+    }
+
+    reboot_button_container:connect_signal('mouse::enter', function(self)
+        self.bg = beautiful.bg_normal
+        self.fg = beautiful.fg_normal
+        self:emit_signal('widget::updated')
+    end)
+
+    reboot_button_container:connect_signal('mouse::leave', function(self)
+        self.bg = beautiful.bg_focus
+        self.fg = beautiful.fg_focus
+        self:emit_signal('widget::updated')
+    end)
+
+    shutdown_button = wibox.widget {
+        text = '',
+        font = 'SauceCodePro Nerd Font 20',
+        align = 'center',
+        valign = 'center',
+        forced_width = 50,
+        forced_height = 50,
+        widget = wibox.widget.textbox
+    }
+
+    shutdown_button:buttons(gears.table.join(
+        shutdown_button:buttons(),
+        awful.button({}, 1, nil, function()
+
+        end)
+    ))
+
+    shutdown_button_container = wibox.widget {
+        shutdown_button,
+        shape = gears.shape.rounded_rect,
+        widget = wibox.container.background
+    }
+
+    shutdown_button_container:connect_signal('mouse::enter', function(self)
+        self.bg = beautiful.bg_normal
+        self.fg = beautiful.fg_normal
+        self:emit_signal('widget::updated')
+    end)
+
+    shutdown_button_container:connect_signal('mouse::leave', function(self)
+        self.bg = beautiful.bg_focus
+        self.fg = beautiful.fg_focus
+        self:emit_signal('widget::updated')
+    end)
+
+    profilepic = wibox.widget {
+        image = pfp,
+        resize = true,
+        forced_height = 80,
+        forced_width = 80,
+        widget = wibox.widget.imagebox
+    }
+
+    username = wibox.widget {
+        text = username,
+        align = 'center',
+        font = 'SauceCodePro Nerd Font Bold 12',
+        forced_width = 110,
+        widget = wibox.widget.textbox
+    }
+
+    profile_container = wibox.widget {
+        {
+            separator,
+            {
+                separator,
+                profilepic,
+                separator,
+                layout = wibox.layout.fixed.horizontal,
+                spacing = 20,
+            },
+            username,
+            layout = wibox.layout.fixed.vertical,
+            spacing = 5
+        },
+        shape = gears.shape.rounded_rect,
+        bg = beautiful.bg_focus,
+        fg = beautiful.fg_focus,
+        widget = wibox.container.background
+    } 
+
+    clock = wibox.widget {
+        format = ' %H:\n  %M',
+        font = 'SauceCodePro Nerd Font Bold 30',
+        forced_width = 130,
+        forced_height = 138,
+        widget = wibox.widget.textclock
+    }
+
+    clock_container = wibox.widget {
+        clock,
+        shape = gears.shape.rounded_rect,
+        bg = beautiful.bg_focus,
+        fg = beautiful.fg_focus,
+        widget = wibox.container.background
+    }
+    
+    control_center = wibox.widget {
+        {
+            separator,
+            {
+                separator,
+                nightlight_button_container,
+                refresh_button_container,
+                lockscreen_button_container,
+                separator,
+                layout = wibox.layout.fixed.horizontal,
+                spacing = 5
+            },
+            {
+                separator,
+                logout_button_container,
+                reboot_button_container,
+                shutdown_button_container,
+                separator,
+                layout = wibox.layout.fixed.horizontal,
+                spacing = 5
+            },
+            separator,
+            layout = wibox.layout.fixed.vertical,
+            spacing = 0
+        },        
+        shape = gears.shape.rounded_rect,
+        bg = beautiful.bg_focus,
+        fg = beautiful.fg_focus,
+        widget = wibox.container.background
+    }
+
+    todo = wibox.widget {
+       {    
+            separator,
+            {
+                separator,
+                wibox.widget {
+                    text = 'TODO',
+                    font = 'SauceCodePro Nerd Font Bold 20',
+                    widget = wibox.widget.textbox,
+                },
+                awful.widget.watch('bash -c ~/.config/awesome/todo.sh', 30, nil, 
+                    wibox.widget {
+                        font = 'SauceCodePro Nerd Font Bold 14',
+                        widget = wibox.widget.textbox
+                    }
+                ),
+                layout = wibox.layout.fixed.vertical,
+                spacing = 0
+            },
+            layout = wibox.layout.fixed.horizontal,
+            spacing = 15
+       },
+        shape = gears.shape.rounded_rect,
+        bg = beautiful.bg_focus,
+        fg = beautiful.fg_focus,
+        widget = wibox.container.background
+    }
+
+    start_menu = awful.popup {
+        widget = {
+            {
+                separator,
+                {
+                    separator,
+                    profile_container,
+                    separator,
+                    clock_container, 
+                    separator,
+                    layout = wibox.layout.fixed.vertical,
+                    spacing = 0,
+                },
+                separator,
+                {
+                    separator,
+                    todo, separator,
+                    control_center,
+                    separator,
+                    layout = wibox.layout.fixed.vertical,
+                },
+                separator,
+                layout = wibox.layout.fixed.horizontal,
+                spacing = 10
+            },
+            margins = 0,
+            widget = wibox.container.margin
+        },
+        border_color = beautiful.border_focus, 
+        border_width = border,
+        shape = gears.shape.rounded_rect,
+        ontop = true,
+        x = 0,
+        y = 715,
+        visible = false
+    }
+
+    start_button = wibox.widget {
+        text = '  >~<  ',
+        widget = wibox.widget.textbox
+    }
+
+    start_button_container = wibox.widget {
+        start_button,
+        bg = beautiful.bg_focus,
+        fg = beautiful.fg_focus,
+        shape = gears.shape.rectangle,
+        widget = wibox.container.background
+    }
+
+    start_button:buttons(gears.table.join(
+        start_button:buttons(),
+        awful.button({}, 1, nil, function()
+            if start_menu.visible then
+                start_menu.visible = false
+                start_button_container.shape = gears.shape.rectangle,
+                start_button_container:emit_signal("widget::updated")
+            else
+                start_menu.visible = true
+                start_button_container.shape = gears.shape.circle,
+                start_button_container:emit_signal("widget::updated")
+            end
+        end)
+    ))
 
     -- Add widgets to the wibox
     s.mywibox:setup {
         layout = wibox.layout.align.horizontal,
         { -- Left widgets
             layout = wibox.layout.fixed.horizontal,
-            {
-                wibox.widget{
-                    text = '  >~<  ',
-                    widget = wibox.widget.textbox
-                },
-                bg = beautiful.bg_focus,
-                fg = beautiful.fg_focus,
-                widget = wibox.container.background
-            },
+            start_button_container,
             space,
             s.mytaglist,
             space,

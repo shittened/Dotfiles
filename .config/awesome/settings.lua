@@ -9,6 +9,10 @@ color3 = indigo
 
 icon_theme = 'Papirus-Dark'
 
+screen_padding = 20
+border = 3
+gaps = 5
+
 terminal = 'kitty'
 browser = 'chromium'
 filemanager = 'pcmanfm'
@@ -16,3 +20,6 @@ filemanager = 'pcmanfm'
 run = 'dmenu_run'
 drun = 'rofi -show drun -hover-select -me-select-entry "" -me-accept-entry MousePrimary -show-icons'
 wallpaper = 'nitrogen'
+
+pfp = '/home/shitten/Pictures/marona.png'
+username = 'Shitten'
