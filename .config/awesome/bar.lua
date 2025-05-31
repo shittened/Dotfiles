@@ -4,8 +4,6 @@ local wibox = require('wibox')
 local beautiful = require('beautiful')
 require('settings')
 
-
-
 -- Create a wibox for each screen and add it
 local taglist_buttons = gears.table.join(
                     awful.button({ }, 1, function(t) t:view_only() end),
@@ -56,7 +54,11 @@ awful.screen.connect_for_each_screen(function(s)
     }
 
     -- Each screen has its own tag table.
-    awful.tag({ " x ", " x ", " x ", " x ", " x ", " x ", " x ", " x ", " x " }, s, awful.layout.layouts[1])
+    workspaces = {}
+    for workspace = 1, 9 do
+        table.insert(workspaces, workspace_icon)
+    end
+    awful.tag(workspaces, s, awful.layout.layouts[1])
 
     -- We need one layoutbox per screen.
     s.mylayoutbox = awful.widget.layoutbox(s)
@@ -110,7 +112,7 @@ awful.screen.connect_for_each_screen(function(s)
     nightlight_button:buttons(gears.table.join(
         nightlight_button:buttons(),
         awful.button({}, 1, nil, function()
-
+            -- TODO
         end)
     ))
 
@@ -178,7 +180,7 @@ awful.screen.connect_for_each_screen(function(s)
     lockscreen_button:buttons(gears.table.join(
         lockscreen_button:buttons(),
         awful.button({}, 1, nil, function()
-
+            awful.spawn('slock')
         end)
     ))
 
@@ -212,9 +214,7 @@ awful.screen.connect_for_each_screen(function(s)
 
     logout_button:buttons(gears.table.join(
         logout_button:buttons(),
-        awful.button({}, 1, nil, function()
-
-        end)
+        awful.button({}, 1, nil, awesome.quit)
     ))
 
     logout_button_container = wibox.widget {
@@ -248,7 +248,7 @@ awful.screen.connect_for_each_screen(function(s)
     reboot_button:buttons(gears.table.join(
         reboot_button:buttons(),
         awful.button({}, 1, nil, function()
-
+            awful.spawn('reboot')
         end)
     ))
 
@@ -283,7 +283,7 @@ awful.screen.connect_for_each_screen(function(s)
     shutdown_button:buttons(gears.table.join(
         shutdown_button:buttons(),
         awful.button({}, 1, nil, function()
-
+            awful.spawn('shutdown now')
         end)
     ))
 

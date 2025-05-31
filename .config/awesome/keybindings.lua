@@ -22,6 +22,20 @@ globalkeys = gears.table.join(
         awesome.quit,
         {description = 'quit awesome', group = 'awesome'}),
 
+    awful.key({ modkey }, 'a',
+        function()
+            if start_menu.visible then
+                start_menu.visible = false
+                start_button_container.shape = gears.shape.rectangle,
+                start_button_container:emit_signal("widget::updated")
+            else
+                start_menu.visible = true
+                start_button_container.shape = gears.shape.circle,
+                start_button_container:emit_signal("widget::updated")
+            end
+        end,
+        {description = 'toggle start menu', group = 'awesome'}),
+
     -- Window manipulation
     awful.key({ modkey }, 'Right', 
         function ()

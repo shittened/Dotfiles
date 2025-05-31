@@ -2,14 +2,14 @@ require('colors')
 
 theme = 'nya'
 
-font = 'SauceCode Nerd Font Bold 10'
-color1 = blue
+font = 'SauceCode Nerd Font Bold '
+color1 = orange
 color2 = fullblack
 color3 = indigo
 
 icon_theme = 'Papirus-Dark'
 
-screen_padding = 20
+screen_padding = 40
 border = 3
 gaps = 5
 
@@ -23,3 +23,5 @@ wallpaper = 'nitrogen'
 
 pfp = '/home/shitten/Pictures/marona.png'
 username = 'Shitten'
+
+workspace_icon = '⏹'

@@ -9,7 +9,7 @@ local themes_path = gfs.get_themes_dir()
 awesome.themes_path = '~/.config/awesome/themes'
 beautiful.init(gears.filesystem.get_themes_dir() .. theme .."/theme.lua")
 
-beautiful.font = font
+beautiful.font = font .. '10'
 beautiful.bg_normal = color2
 beautiful.bg_focus =  color1
 beautiful.bg_urgent = color1
@@ -35,6 +35,7 @@ beautiful.taglist_squares_sel = beautiful.theme_assets.taglist_squares_sel(
 beautiful.taglist_squares_unsel = beautiful.theme_assets.taglist_squares_unsel(
     taglist_square_size, beautiful.fg_normal
 )
+beautiful.taglist_font = font .. '10'
 
 -- Variables set for theming notifications:
 notification_font = font
