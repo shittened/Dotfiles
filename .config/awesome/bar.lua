@@ -271,8 +271,8 @@ awful.screen.connect_for_each_screen(function(s)
     end)
 
     shutdown_button = wibox.widget {
-        text = '',
-        font = 'SauceCodePro Nerd Font 20',
+        text = '󰐥',
+        font = 'SauceCodePro Nerd Font Bold 24',
         align = 'center',
         valign = 'center',
         forced_width = 50,

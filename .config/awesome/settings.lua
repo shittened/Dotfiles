@@ -3,13 +3,13 @@ require('colors')
 theme = 'nya'
 
 font = 'SauceCode Nerd Font Bold '
-color1 = orange
+color1 = green
 color2 = fullblack
 color3 = indigo
 
 icon_theme = 'Papirus-Dark'
 
-screen_padding = 40
+screen_padding = 20
 border = 3
 gaps = 5
 
